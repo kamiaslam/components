@@ -14,6 +14,12 @@ import Box from 'grommet/components/Box';
 import Hero from 'grommet/components/Hero';
 import Heading from 'grommet/components/Heading';
 import Image from 'grommet/components/Image';
+import Notification from 'grommet/components/Notification';
+import Spinning from 'grommet/components/icons/Spinning';
+import TableHeader from 'grommet/components/TableHeader';
+import Table from 'grommet/components/Table';
+import TableRow from 'grommet/components/TableRow';
+
 
 import { Button as CButton } from '../src';
 
@@ -70,6 +76,46 @@ storiesOf('Hero', module).add('with text', () => (
       </Box>
     </Box>
   </Hero>
+));
+
+storiesOf('Notification', module).add('with text', () => (
+  <Notification state='Sample state'
+  message='Sample message'
+  timestamp={{}} />
+));
+
+
+storiesOf('TableHeader', module).add('Example', () => (
+  <Table>
+  <TableHeader labels={['Name', 'Note']} />
+  <tbody>
+    <TableRow>
+      <td>
+        Alan
+      </td>
+      <td>
+        plays accordion
+      </td>
+    </TableRow>
+    <TableRow>
+      <td>
+        Chris
+      </td>
+      <td>
+        drops the mic
+      </td>
+    </TableRow>
+    <TableRow>
+      <td>
+        Tracy
+      </td>
+      <td>
+        travels the world
+      </td>
+    </TableRow>
+  </tbody>
+</Table>
+  
 ));
 
 

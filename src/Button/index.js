@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Button from 'grommet/components/Button';
+import Spinning from 'grommet/components/icons/Spinning';
 
 export default class CButton extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class CButton extends Component {
         border: none;
         background-color: '${color}'
       }`}</style> */}
+      <Spinning />
       </Button>
     );
   }

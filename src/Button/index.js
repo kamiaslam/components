@@ -8,13 +8,24 @@ export default class CButton extends Component {
     const { children, onClick, color } = this.props;
 
     return (
-      <Button label="Label" onClick={() => { }} className="button" style={{backgroundColor: color}}>
-      {/* <style jsx>{`
-      .button {
-        border: none;
-        background-color: '${color}'
-      }`}</style> */}
-      <Spinning />
+      // <div>
+      //   <Button label="Label" onClick={() => {}} className="button">
+      //     <Spinning />
+      //   </Button>
+
+      //   <style jsx>{`
+      //     div :global(.button) {
+      //       color: ${color};
+      //     }
+      //   `}</style>
+      // </div>
+
+      <Button
+        label="Label"
+        onClick={() => {}}
+        style={{ backgroundColor: color }}
+      >
+        <Spinning />
       </Button>
     );
   }

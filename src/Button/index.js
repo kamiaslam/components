@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 
-export default class Button extends Component {
+import Button from 'grommet/components/Button';
+
+export default class CButton extends Component {
   render() {
     const { children, onClick, color } = this.props;
 
     return (
-      <button
-        className="button"
-        style={{ backgroundColor: color }}
-        onClick={onClick}
-      >
-        {children}
-        <style jsx>{`
-          .button {
-            border: none;
-          }
-        `}</style>
-      </button>
+      <Button label="Label" onClick={() => { }} className="button" style={{backgroundColor: color}}>
+      {/* <style jsx>{`
+      .button {
+        border: none;
+        background-color: '${color}'
+      }`}</style> */}
+      </Button>
     );
   }
 }

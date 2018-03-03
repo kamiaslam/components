@@ -28,7 +28,7 @@ import {
   Anchor,
 } from 'grommet';
 
-import { CButton, CSelect } from '../src';
+import { CButton, CSelect, CPage, CCard } from '../src';
 
 import 'grommet/grommet.min.css';
 
@@ -249,3 +249,9 @@ storiesOf('Select', module)
       }}
     />
   ));
+
+storiesOf('Page', module).add('Page', () => (
+  <CPage>
+    <CCard title="Reset your password" />
+  </CPage>
+));

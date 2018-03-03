@@ -24,6 +24,7 @@ export default class Page extends Component {
           .card__title {
             font-size: 1.4rem;
             font-weight: 100;
+            color: #333333;
           }
 
           .card__footer {

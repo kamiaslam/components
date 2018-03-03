@@ -28,7 +28,7 @@ import {
   Anchor,
 } from 'grommet';
 
-import { CButton, CSelect, CPage, CCard } from '../src';
+import { CButton, CSelect, CPage, CCard, CParagraph } from '../src';
 
 import 'grommet/grommet.min.css';
 
@@ -252,6 +252,11 @@ storiesOf('Select', module)
 
 storiesOf('Page', module).add('Page', () => (
   <CPage>
-    <CCard title="Reset your password" />
+    <CCard title="Reset your password">
+      <CParagraph>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </CParagraph>
+    </CCard>
   </CPage>
 ));

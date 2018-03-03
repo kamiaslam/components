@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { Button, Spinning, SVGIcon } from 'grommet';
 
+import styles from './styles.scss';
+
 export default class CButton extends Component {
   render() {
     const { children, onClick, color } = this.props;
@@ -19,7 +21,7 @@ export default class CButton extends Component {
       //   `}</style>
       // </div>
 
-      <Button label="Label" onClick={() => {}}>
+      <Button label="Label" onClick={() => {}} className={styles.button}>
         <SVGIcon
           viewBox="0 0 130 108"
           version="1.1"

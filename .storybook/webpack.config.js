@@ -1,28 +1,19 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const ExtractTextPluginConfig = new ExtractTextPlugin({
+  filename: './styles/style.css',
+  allChunks: true,
+});
 
 module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: [
-                './node_modules',
-                './node_modules/grommet/node_modules',
-              ],
-            },
-          },
-        ],
+        test: /\.s?css$/,
+        loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
       },
     ],
   },
+  plugins: [ExtractTextPluginConfig],
 };

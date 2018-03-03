@@ -6,8 +6,6 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Welcome } from '@storybook/react/demo';
 
-import 'grommet/scss/vanilla/index.scss';
-
 import {
   Accordion,
   AccordionPanel,
@@ -31,6 +29,8 @@ import {
 } from 'grommet';
 
 import { CButton, CSelect } from '../src';
+
+import 'grommet/grommet.min.css';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />

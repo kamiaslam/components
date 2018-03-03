@@ -1,5 +1,16 @@
-._127GDumGMta3aQEC03iQzg {
-  background-color: pink !important; }
+button._127GDumGMta3aQEC03iQzg {
+  border-radius: 0;
+  font-size: 0.875rem;
+  border-color: #929292;
+  color: #333333;
+  padding: 6px 18px;
+  min-width: auto; }
+  button._127GDumGMta3aQEC03iQzg:hover {
+    box-shadow: none !important; }
+  button._127GDumGMta3aQEC03iQzg.danger {
+    border-color: #C82A24;
+    background-color: #C82A24;
+    color: #ffffff; }
 @font-face {
   font-family: Work Sans;
   font-style: normal;

@@ -13,6 +13,13 @@ module.exports = {
         test: /\.s?css$/,
         loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
       },
+      {
+        test: /\.(jpe?g|png|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: './images/[hash].[ext]',
+        },
+      },
     ],
   },
   plugins: [ExtractTextPluginConfig],

@@ -46,6 +46,7 @@
     "styled-jsx": "^2.2.5"
   },
   "dependencies": {
+    "file-loader": "^1.1.11",
     "grommet": "^1.10.1"
   }
 }

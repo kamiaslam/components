@@ -40,4 +40,13 @@ Object.defineProperty(exports, 'CCard', {
   }
 });
 
+var _Paragraph = require('./components/Paragraph');
+
+Object.defineProperty(exports, 'CParagraph', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Paragraph).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

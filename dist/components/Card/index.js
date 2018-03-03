@@ -44,12 +44,12 @@ var Page = function (_Component) {
       return _react2.default.createElement(
         "div",
         {
-          className: "jsx-3820851009" + " " + "card"
+          className: "jsx-623356226" + " " + "card"
         },
         _react2.default.createElement(
           "h3",
           {
-            className: "jsx-3820851009" + " " + "card__title"
+            className: "jsx-623356226" + " " + "card__title"
           },
           title
         ),
@@ -57,13 +57,13 @@ var Page = function (_Component) {
         _react2.default.createElement(
           "div",
           {
-            className: "jsx-3820851009" + " " + "card__footer"
+            className: "jsx-623356226" + " " + "card__footer"
           },
           footer
         ),
         _react2.default.createElement(_style2.default, {
-          styleId: "3820851009",
-          css: [".card.jsx-3820851009{width:500px;border:3px solid #1f262b;background-color:#ffffff;padding:48px 28px 16px 28px;}", ".card__title.jsx-3820851009{font-size:1.4rem;font-weight:100;}", ".card__footer.jsx-3820851009{border-top:1px solid #1f262b;padding-top:16px;}"]
+          styleId: "623356226",
+          css: [".card.jsx-623356226{width:500px;border:3px solid #1f262b;background-color:#ffffff;padding:48px 28px 16px 28px;}", ".card__title.jsx-623356226{font-size:1.4rem;font-weight:100;color:#333333;}", ".card__footer.jsx-623356226{border-top:1px solid #1f262b;padding-top:16px;}"]
         })
       );
     }

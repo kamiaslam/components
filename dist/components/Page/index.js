@@ -45,24 +45,61 @@ var Page = function (_Component) {
       return _react2.default.createElement(
         'div',
         {
-          className: _style2.default.dynamic([['1934205167', [_night2.default]]]) + ' ' + 'page'
+          className: _style2.default.dynamic([['3997878441', [_night2.default]]]) + ' ' + 'page'
         },
-        _react2.default.createElement('header', {
-          className: _style2.default.dynamic([['1934205167', [_night2.default]]]) + ' ' + 'page__header'
-        }),
+        _react2.default.createElement(
+          'header',
+          {
+            className: _style2.default.dynamic([['3997878441', [_night2.default]]]) + ' ' + 'page__header'
+          },
+          _react2.default.createElement(
+            'h1',
+            {
+              className: _style2.default.dynamic([['3997878441', [_night2.default]]])
+            },
+            'logo'
+          ),
+          _react2.default.createElement(
+            'div',
+            {
+              className: _style2.default.dynamic([['3997878441', [_night2.default]]]) + ' ' + 'auth-info'
+            },
+            _react2.default.createElement(
+              'span',
+              {
+                className: _style2.default.dynamic([['3997878441', [_night2.default]]])
+              },
+              'You are logging on as ',
+              _react2.default.createElement(
+                'b',
+                {
+                  className: _style2.default.dynamic([['3997878441', [_night2.default]]])
+                },
+                'John Smith'
+              )
+            ),
+            _react2.default.createElement(
+              'a',
+              {
+                className: _style2.default.dynamic([['3997878441', [_night2.default]]])
+              },
+              'Not John Smith?'
+            )
+          )
+        ),
         _react2.default.createElement(
           'div',
           {
-            className: _style2.default.dynamic([['1934205167', [_night2.default]]]) + ' ' + 'page__content'
+            className: _style2.default.dynamic([['3997878441', [_night2.default]]]) + ' ' + 'page__content'
           },
           children
         ),
         _react2.default.createElement('footer', {
-          className: _style2.default.dynamic([['1934205167', [_night2.default]]]) + ' ' + 'page__footer'
+          className: _style2.default.dynamic([['3997878441', [_night2.default]]]) + ' ' + 'page__footer'
         }),
         _react2.default.createElement(_style2.default, {
-          styleId: '1934205167',
-          css: ['.page.__jsx-style-dynamic-selector{background-color:#1f262b;min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}', '.page__header.__jsx-style-dynamic-selector{height:50px;}', '.page__content.__jsx-style-dynamic-selector{-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:6px;background-image:url(' + _night2.default + ');background-size:cover;background-position:center;}', '.page__footer.__jsx-style-dynamic-selector{height:50px;}'],
+          styleId: '3997878441',
+          css: ['.page.__jsx-style-dynamic-selector{background-color:#1f262b;min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}', '.page__header.__jsx-style-dynamic-selector{padding:0 32px;min-height:50px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}', '.page__content.__jsx-style-dynamic-selector{-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:0 6px;background-image:url(' + _night2.default + ');background-size:cover;background-position:center;}', '.page__footer.__jsx-style-dynamic-selector{height:50px;}', '.auth-info.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;font-size:0.8rem;color:rgba(255,255,255,0.8);font-weight:100;}', '.auth-info.__jsx-style-dynamic-selector b.__jsx-style-dynamic-selector{color:#ffffff;}', 'h1.__jsx-style-dynamic-selector{margin:0;color:#fff;font-size:1rem;}', '.auth-info.__jsx-style-dynamic-selector a.__jsx-style-dynamic-selector{-webkit-text-decoration:underline;text-decoration:underline;cursor:pointer;}'],
           dynamic: [_night2.default]
         })
       );

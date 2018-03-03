@@ -1,2 +1,3 @@
 export { default as CButton } from './components/Button';
 export { default as CSelect } from './components/Select';
+export { default as CPage } from './components/Page';

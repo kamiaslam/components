@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.s?css$/,
-        loader: ExtractTextPlugin.extract('css-loader!sass-loader'),
+        loader: ExtractTextPlugin.extract('css-loader!sass-loader!autoprefixer-loader?browsers=last 20 versions'),
       },
       {
         test: /\.(jpe?g|png|svg)$/,

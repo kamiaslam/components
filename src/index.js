@@ -1,2 +1,2 @@
-export { default as Button } from './Button';
-export {default as Select} from './Select';
+export { default as CButton } from './Button';
+export { default as CSelect } from './Select';

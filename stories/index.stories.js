@@ -8,253 +8,244 @@ import { Welcome } from '@storybook/react/demo';
 
 import 'grommet/scss/vanilla/index.scss';
 
-import Accordion from 'grommet/components/Accordion';
-import AccordionPanel from 'grommet/components/AccordionPanel';
-import Paragraph from 'grommet/components/Paragraph';
-import Button from 'grommet/components/Button';
-import Columns from 'grommet/components/Columns';
-import Box from 'grommet/components/Box';
-import Hero from 'grommet/components/Hero';
-import Heading from 'grommet/components/Heading';
-import Image from 'grommet/components/Image';
-import Notification from 'grommet/components/Notification';
-import Spinning from 'grommet/components/icons/Spinning';
-import TableHeader from 'grommet/components/TableHeader';
-import Table from 'grommet/components/Table';
-import TableRow from 'grommet/components/TableRow';
-import Select from 'grommet/components/Select';
-import Split from 'grommet/components/Split';
-import Section from 'grommet/components/Section'
-import Card from 'grommet/components/Card';
-import Anchor from 'grommet/components/Anchor';
+import {
+  Accordion,
+  AccordionPanel,
+  Paragraph,
+  Button,
+  Columns,
+  Box,
+  Hero,
+  Heading,
+  Image,
+  Notification,
+  Spinning,
+  TableHeader,
+  Table,
+  TableRow,
+  Select,
+  Split,
+  Section,
+  Card,
+  Anchor,
+} from 'grommet';
 
-
-import { Button as CButton } from '../src';
-import { Select as CSelect } from '../src';
+import { CButton, CSelect } from '../src';
 
 storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />
 ));
 
 storiesOf('Accordion', module).add('Example', () => (
-
-    <Accordion>
-  <AccordionPanel heading='First Title'>
-    <Paragraph>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </Paragraph>
-  </AccordionPanel>
-  <AccordionPanel heading='Second Title'>
-    <Paragraph>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </Paragraph>
-  </AccordionPanel>
-  <AccordionPanel heading='Third Title'>
-    <Paragraph>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </Paragraph>
-  </AccordionPanel>
-</Accordion>
-
-)); 
+  <Accordion>
+    <AccordionPanel heading="First Title">
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </Paragraph>
+    </AccordionPanel>
+    <AccordionPanel heading="Second Title">
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </Paragraph>
+    </AccordionPanel>
+    <AccordionPanel heading="Third Title">
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </Paragraph>
+    </AccordionPanel>
+  </Accordion>
+));
 
 storiesOf('Button', module)
-  .add('with text', () => (
-    <Button label="Label" onClick={() => { }} />
-  ))
+  .add('with text', () => <Button label="Label" onClick={() => {}} />)
   .add('cbutton with text', () => (
     <div>
-      <CButton label="Label" onClick={() => { }} color="pink"/>
-      <CButton label="Label" onClick={() => { }} />
+      <CButton label="Label" onClick={() => {}} color="pink" />
+      <CButton label="Label" onClick={() => {}} />
     </div>
   ));
+
 storiesOf('Section', module).add('Example', () => (
   <Section>
     <h1>Heading 1</h1>
     <p>Some paragraph text</p>
   </Section>
-)); 
+));
 
 storiesOf('Card', module).add('Example', () => (
   <div>
-  <Columns size='medium' justify='between'>
-  <Card thumbnail='http://via.placeholder.com/350x150'
-  heading='Sample Heading'
-  description='Sample description providing more details.'
-  headingStrong={false}
-  link={<Anchor href=''
-  label='Sample anchor' />}
-  contentPad='none' />
-  
-  <Card thumbnail='http://via.placeholder.com/350x150'
-  heading='Sample Heading'
-  description='Sample description providing more details.'
-  headingStrong={false}
-  link={<Anchor href=''
-  label='Sample anchor' />}
-  contentPad='none' />
+    <Columns size="medium" justify="between">
+      <Card
+        thumbnail="http://via.placeholder.com/350x150"
+        heading="Sample Heading"
+        description="Sample description providing more details."
+        headingStrong={false}
+        link={<Anchor href="" label="Sample anchor" />}
+        contentPad="none"
+      />
 
-  <Card thumbnail='http://via.placeholder.com/350x150'
-  heading='Sample Heading'
-  description='Sample description providing more details.'
-  headingStrong={false}
-  link={<Anchor href=''
-  label='Sample anchor' />}
-  contentPad='none' />
-  </Columns>
+      <Card
+        thumbnail="http://via.placeholder.com/350x150"
+        heading="Sample Heading"
+        description="Sample description providing more details."
+        headingStrong={false}
+        link={<Anchor href="" label="Sample anchor" />}
+        contentPad="none"
+      />
+
+      <Card
+        thumbnail="http://via.placeholder.com/350x150"
+        heading="Sample Heading"
+        description="Sample description providing more details."
+        headingStrong={false}
+        link={<Anchor href="" label="Sample anchor" />}
+        contentPad="none"
+      />
+    </Columns>
   </div>
-)); 
+));
+
 storiesOf('Columns', module).add('with text', () => (
-  <Columns size='small'
-  masonry={false}
-  maxCount={4}>
-    <Box align='center'
-      pad='medium'
-      margin='small'
-      colorIndex='light-2'>
+  <Columns size="small" masonry={false} maxCount={4}>
+    <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 1
     </Box>
 
-    <Box align='center'
-      pad='medium'
-      margin='small'
-      colorIndex='light-1'>
-      <Button label="Label" onClick={() => { }} />
+    <Box align="center" pad="medium" margin="small" colorIndex="light-1">
+      <Button label="Label" onClick={() => {}} />
     </Box>
 
-    <Box align='center'
-      pad='medium'
-      margin='small'
-      colorIndex='light-2'>
+    <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 1
     </Box>
-    <Box align='center'
-      pad='medium'
-      margin='small'
-      colorIndex='light-2'>
+    <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 2
     </Box>
-    <Box align='center'
-      pad='medium'
-      margin='small'
-      colorIndex='light-2'>
+    <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 3
     </Box>
-    <Box align='center'
-      pad='medium'
-      margin='small'
-      colorIndex='light-2'>
+    <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 4
     </Box>
-    <Box align='center'
-      pad='medium'
-      margin='small'
-      colorIndex='light-2'>
+    <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 5
     </Box>
-    <Box align='center'
-      pad='medium'
-      margin='small'
-      colorIndex='light-2'>
+    <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 6
     </Box>
   </Columns>
-
-  
 ));
 
 storiesOf('Hero', module).add('with text', () => (
-  <Hero background={<Image src='http://via.placeholder.com/1000x350'
-    fit='cover'
-    full={true} />}
-    backgroundColorIndex='dark'>
-    <Box direction='row'
-      justify='left'
-      align='left'>
-      <Box basis='1'
-        align='right'
-        pad='large'>
-        <Heading margin='none'>
-          Sample Heading
-      </Heading>
+  <Hero
+    background={
+      <Image
+        src="http://via.placeholder.com/1000x350"
+        fit="cover"
+        full={true}
+      />
+    }
+    backgroundColorIndex="dark"
+  >
+    <Box direction="row" justify="left" align="left">
+      <Box basis="1" align="right" pad="large">
+        <Heading margin="none">Sample Heading</Heading>
       </Box>
     </Box>
   </Hero>
 ));
 
 storiesOf('Notification', module).add('with text', () => (
-  <Notification state='Sample state'
-  message='Sample message'
-  timestamp={{}} />
+  <Notification state="Sample state" message="Sample message" timestamp={{}} />
 ));
 
 storiesOf('Split', module).add('Example', () => (
-  <Split showOnResponsive='both'>
-    <Box colorIndex='neutral-1'
-      justify='center'
-      align='center'
-      pad='medium'>
+  <Split showOnResponsive="both">
+    <Box colorIndex="neutral-1" justify="center" align="center" pad="medium">
       Left Side
     </Box>
-    <Box colorIndex='neutral-2'
-      justify='center'
-      align='center'
-      pad='medium'>
+    <Box colorIndex="neutral-2" justify="center" align="center" pad="medium">
       Right Side
     </Box>
-</Split>
+  </Split>
 ));
+
 storiesOf('TableHeader', module).add('Example', () => (
   <Table>
-  <TableHeader labels={['Name', 'Account Number', 'Client ID', 'Account Type', 'Status']} />
-  <tbody>
-    <TableRow>
-      <td>Alan Scott</td>
-      <td>01129990</td>
-      <td>11-223</td>
-      <td>Current</td>
-      <td>Active</td>
-    </TableRow>
-    <TableRow>
-      <td>Eric Smith</td>
-      <td>01129990</td>
-      <td>11-233</td>
-      <td>Savings</td>
-      <td>Active</td>
-    </TableRow>
-    <TableRow>
-      <td>John Doe</td>
-      <td>01129990</td>
-      <td>11-223</td>
-      <td>Current</td>
-      <td>Active</td>
-    </TableRow>
-    <TableRow>
-      <td>Jane Doe</td>
-      <td>02129990</td>
-      <td>10-123</td>
-      <td>Current</td>
-      <td>Active</td>
-    </TableRow>
-    
-  </tbody>
-</Table>
-  
+    <TableHeader
+      labels={['Name', 'Account Number', 'Client ID', 'Account Type', 'Status']}
+    />
+    <tbody>
+      <TableRow>
+        <td>Alan Scott</td>
+        <td>01129990</td>
+        <td>11-223</td>
+        <td>Current</td>
+        <td>Active</td>
+      </TableRow>
+      <TableRow>
+        <td>Eric Smith</td>
+        <td>01129990</td>
+        <td>11-233</td>
+        <td>Savings</td>
+        <td>Active</td>
+      </TableRow>
+      <TableRow>
+        <td>John Doe</td>
+        <td>01129990</td>
+        <td>11-223</td>
+        <td>Current</td>
+        <td>Active</td>
+      </TableRow>
+      <TableRow>
+        <td>Jane Doe</td>
+        <td>02129990</td>
+        <td>10-123</td>
+        <td>Current</td>
+        <td>Active</td>
+      </TableRow>
+    </tbody>
+  </Table>
 ));
 
-storiesOf('Select', module).add('Example', () => (
-  <div style={{width: "400px"}}>
-  <Select placeHolder='None'
-  options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
-  value={undefined}
-  onChange={() => { }} />
-  </div>
-))
-.add('Example 2', () => (
-    <CSelect placeHolder='None'
+storiesOf('Select', module)
+  .add('Example', () => (
+    <div style={{ width: '400px' }}>
+      <Select
+        placeHolder="None"
+        options={[
+          'one',
+          'two',
+          'three',
+          'four',
+          'five',
+          'six',
+          'seven',
+          'eight',
+        ]}
+        value={undefined}
+        onChange={({ target, option, value }) => {
+          alert(`your choice: ${value}`);
+        }}
+      />
+    </div>
+  ))
+  .add('Example 2', () => (
+    <CSelect
+      placeHolder="None"
       options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
       value={undefined}
-      onChange={() => { }} />
-));
-
-
+      onChange={({ target, option, value }) => {
+        alert(`your choice: ${value}`);
+      }}
+    />
+  ));

@@ -3,6 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import { withInfo } from '@storybook/addon-info';
 
 import { Welcome } from '@storybook/react/demo';
 
@@ -37,7 +38,7 @@ storiesOf('Welcome', module).add('to Storybook', () => (
   <Welcome showApp={linkTo('Button')} />
 ));
 
-storiesOf('Accordion', module).add('Example', () => (
+storiesOf('Accordion', module).addWithInfo('Example', () => (
   <Accordion>
     <AccordionPanel heading="First Title">
       <Paragraph>
@@ -67,22 +68,22 @@ storiesOf('Accordion', module).add('Example', () => (
 ));
 
 storiesOf('Button', module)
-  .add('with text', () => <Button label="Label" onClick={() => {}} />)
-  .add('cbutton with text', () => (
+  .addWithInfo('with text', () => <Button label="Label" onClick={() => {}} />)
+  .addWithInfo('cbutton with text', () => (
     <div>
       <CButton label="Label" onClick={() => {}} color="pink" />
       <CButton label="Label" onClick={() => {}} />
     </div>
   ));
 
-storiesOf('Section', module).add('Example', () => (
+storiesOf('Section', module).addWithInfo('Example', () => (
   <Section>
     <h1>Heading 1</h1>
     <p>Some paragraph text</p>
   </Section>
 ));
 
-storiesOf('Card', module).add('Example', () => (
+storiesOf('Card', module).addWithInfo('Example', () => (
   <div>
     <Columns size="medium" justify="between">
       <Card
@@ -115,7 +116,7 @@ storiesOf('Card', module).add('Example', () => (
   </div>
 ));
 
-storiesOf('Columns', module).add('with text', () => (
+storiesOf('Columns', module).addWithInfo('with text', () => (
   <Columns size="small" masonry={false} maxCount={4}>
     <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 1
@@ -146,7 +147,7 @@ storiesOf('Columns', module).add('with text', () => (
   </Columns>
 ));
 
-storiesOf('Hero', module).add('with text', () => (
+storiesOf('Hero', module).addWithInfo('with text', () => (
   <Hero
     background={
       <Image
@@ -165,11 +166,11 @@ storiesOf('Hero', module).add('with text', () => (
   </Hero>
 ));
 
-storiesOf('Notification', module).add('with text', () => (
+storiesOf('Notification', module).addWithInfo('with text', () => (
   <Notification state="Sample state" message="Sample message" timestamp={{}} />
 ));
 
-storiesOf('Split', module).add('Example', () => (
+storiesOf('Split', module).addWithInfo('Example', () => (
   <Split showOnResponsive="both">
     <Box colorIndex="neutral-1" justify="center" align="center" pad="medium">
       Left Side
@@ -180,7 +181,7 @@ storiesOf('Split', module).add('Example', () => (
   </Split>
 ));
 
-storiesOf('TableHeader', module).add('Example', () => (
+storiesOf('TableHeader', module).addWithInfo('Example', () => (
   <Table>
     <TableHeader
       labels={['Name', 'Account Number', 'Client ID', 'Account Type', 'Status']}
@@ -219,7 +220,7 @@ storiesOf('TableHeader', module).add('Example', () => (
 ));
 
 storiesOf('Select', module)
-  .add('Example', () => (
+  .addWithInfo('Example', () => (
     <div style={{ width: '400px' }}>
       <Select
         placeHolder="None"
@@ -240,7 +241,7 @@ storiesOf('Select', module)
       />
     </div>
   ))
-  .add('Example 2', () => (
+  .addWithInfo('Example 2', () => (
     <CSelect
       placeHolder="None"
       options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
@@ -251,7 +252,7 @@ storiesOf('Select', module)
     />
   ));
 
-storiesOf('Page', module).add('Page', () => {
+storiesOf('Page', module).addWithInfo('Page', () => {
   const footer = (
     <div>
       <CButton>Action 1</CButton>

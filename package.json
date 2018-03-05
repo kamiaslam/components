@@ -48,6 +48,7 @@
     "styled-jsx": "^2.2.5"
   },
   "dependencies": {
+    "@storybook/addon-info": "^3.3.14",
     "grommet": "^1.10.1"
   }
 }

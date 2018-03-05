@@ -29,7 +29,7 @@ class CButton extends Component {
 
       <Button
         label="Label"
-        onClick={() => {}}
+        onClick={onClick}
         className={[styles.button, danger ? 'danger' : '']}
       />
     );

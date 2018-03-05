@@ -1,12 +1,6 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { withInfo } from '@storybook/addon-info';
-
-import { Welcome } from '@storybook/react/demo';
-
 import {
   Accordion,
   AccordionPanel,
@@ -29,14 +23,9 @@ import {
   Anchor,
   SVGIcon,
 } from 'grommet';
-
-import { CButton, CSelect, CPage, CCard, CParagraph } from '../src';
-
 import 'grommet/grommet.min.css';
 
-storiesOf('Welcome', module).add('to Storybook', () => (
-  <Welcome showApp={linkTo('Button')} />
-));
+import { CButton, CSelect, CPage, CCard, CParagraph } from '../src';
 
 storiesOf('Accordion', module).addWithInfo('Example', () => (
   <Accordion>
@@ -71,8 +60,8 @@ storiesOf('Button', module)
   .addWithInfo('with text', () => <Button label="Label" onClick={() => {}} />)
   .addWithInfo('cbutton with text', () => (
     <div>
-      <CButton label="Label" onClick={() => {}} color="pink" />
-      <CButton label="Label" onClick={() => {}} />
+      <CButton label="Label" onClick={action('clicked')} color="pink" />
+      <CButton label="Label" onClick={action('clicked')} />
     </div>
   ));
 
@@ -247,7 +236,9 @@ storiesOf('Select', module)
       options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
       value={undefined}
       onChange={({ target, option, value }) => {
+        action('clicked');
         alert(`your choice: ${value}`);
+        action('clicked');
       }}
     />
   ));
@@ -255,8 +246,10 @@ storiesOf('Select', module)
 storiesOf('Page', module).addWithInfo('Page', () => {
   const footer = (
     <div>
-      <CButton>Action 1</CButton>
-      <CButton danger>Action 2</CButton>
+      <CButton onClick={action('clicked')}>Action 1</CButton>
+      <CButton onClick={action('clicked')} danger>
+        Action 2
+      </CButton>
 
       <style jsx>{`
         div {

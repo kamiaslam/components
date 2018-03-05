@@ -25,7 +25,7 @@ import {
 } from 'grommet';
 import 'grommet/grommet.min.css';
 
-import { CButton, CSelect, CPage, CCard, CParagraph } from '../src';
+import { CButton, CSelect, CPage, CCard, CParagraph, CHeader } from '../src';
 
 storiesOf('Accordion', module).addWithInfo('Example', () => (
   <Accordion>
@@ -287,3 +287,5 @@ storiesOf('Page', module).addWithInfo('Page', () => {
     </CPage>
   );
 });
+
+storiesOf('Header', module).addWithInfo('header', () => <CHeader />);

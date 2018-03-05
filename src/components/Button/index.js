@@ -12,7 +12,7 @@ const propTypes = {
 
 class CButton extends Component {
   render() {
-    const { children, onClick, color, danger } = this.props;
+    const { children, onClick, color, danger, label } = this.props;
 
     return (
       // <div>
@@ -28,7 +28,7 @@ class CButton extends Component {
       // </div>
 
       <Button
-        label="Label"
+        label={label}
         onClick={onClick}
         className={[styles.button, danger ? 'danger' : '']}
       />

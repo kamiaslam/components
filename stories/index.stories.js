@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import {
   Accordion,
   AccordionPanel,
+  Article,
   Paragraph,
   Button,
   Columns,
@@ -22,6 +23,7 @@ import {
   Card,
   Anchor,
   SVGIcon,
+  Layer,
 } from 'grommet';
 import 'grommet/grommet.min.css';
 
@@ -289,3 +291,9 @@ storiesOf('Page', module).addWithInfo('Page', () => {
 });
 
 storiesOf('Header', module).addWithInfo('header', () => <CHeader />);
+
+storiesOf('Layer', module).addWithInfo('layer', () => (
+  <Layer onClose={action('closed')} closer overlayClose>
+    <Article>content</Article>
+  </Layer>
+));

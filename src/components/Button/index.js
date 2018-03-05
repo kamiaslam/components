@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { Button } from 'grommet';
 
 import styles from './styles.scss';
 
-export default class CButton extends Component {
+const propTypes = {
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+class CButton extends Component {
   render() {
     const { children, onClick, color, danger } = this.props;
 
@@ -29,3 +35,7 @@ export default class CButton extends Component {
     );
   }
 }
+
+CButton.propTypes = propTypes;
+
+export default CButton;

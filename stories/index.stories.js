@@ -35,6 +35,7 @@ import {
   number,
   color,
 } from '@storybook/addon-knobs/react';
+import { checkA11y } from '@storybook/addon-a11y';
 
 import { CButton, CSelect, CPage, CCard, CParagraph, CHeader } from '../src';
 
@@ -69,6 +70,7 @@ storiesOf('Accordion', module).add('Example', () => (
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
   .add(
     'with text',
     withNotes('A very simple component')(

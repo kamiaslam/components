@@ -26,6 +26,7 @@
     "styled-jsx": "^2.2.5"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^3.3.14",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/addon-knobs": "^3.3.14",
     "@storybook/addon-links": "^3.3.14",

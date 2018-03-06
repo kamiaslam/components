@@ -330,8 +330,6 @@ storiesOf('Page', module).add('Page', () => {
   );
 });
 
-storiesOf('Header', module).add('header', () => <CHeader />);
-
 storiesOf('Layer', module).add('layer', () => (
   <Layer onClose={action('closed')} closer overlayClose>
     <Article>content</Article>

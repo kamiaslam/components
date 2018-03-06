@@ -1,15 +1,10 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { withInfo } from '@storybook/addon-info';
-
-import { Welcome } from '@storybook/react/demo';
-
 import {
   Accordion,
   AccordionPanel,
+  Article,
   Paragraph,
   Button,
   Columns,
@@ -31,18 +26,23 @@ import {
   Map,
   List,
   ListItem,
+  Layer,
 } from 'grommet';
 
-
-import { CButton, CSelect, CPage, CCard, CParagraph } from '../src';
-
 import 'grommet/grommet.min.css';
+import { withInfo } from '@storybook/addon-info';
+import { withNotes } from '@storybook/addon-notes';
+import {
+  withKnobs,
+  text,
+  boolean,
+  number,
+  color,
+} from '@storybook/addon-knobs/react';
 
-storiesOf('Welcome', module).add('to Storybook', () => (
-  <Welcome showApp={linkTo('Button')} />
-));
+import { CButton, CSelect, CPage, CCard, CParagraph, CHeader } from '../src';
 
-storiesOf('Accordion', module).addWithInfo('Example', () => (
+storiesOf('Accordion', module).add('Example', () => (
   <Accordion>
     <AccordionPanel heading="First Title">
       <Paragraph>
@@ -102,22 +102,54 @@ storiesOf('List', module).add('Example', () => (
 ));
 
 storiesOf('Button', module)
-  .addWithInfo('with text', () => <Button label="Label" onClick={() => {}} />)
-  .addWithInfo('cbutton with text', () => (
-    <div>
-      <CButton label="Label" onClick={() => {}} color="pink" />
-      <CButton label="Label" onClick={() => {}} background="green" padding="30px" />
-    </div>
-  ));
+  
 
-storiesOf('Section', module).addWithInfo('Example', () => (
+
+  .addDecorator(withKnobs)
+  .add(
+    'with text',
+    withNotes('A very simple component')(
+      withInfo(`
+        ~~~js
+        <Button>Click Here</Button>
+        ~~~`)(() => (
+        <Button
+          label={text('label', 'Hello Button')}
+          onClick={action('clicked')}
+        />
+      )),
+    ),
+  )
+  .add(
+    'cbutton with text',
+    withNotes('A very simple component')(
+      withInfo(`
+        ~~~js
+        <CButton>Click Here</CButton>
+        ~~~`)(() => (
+        <div>
+          <CButton
+            label={text('label', 'HSBC Button')}
+            onClick={action('clicked')}
+            color={color('color', 'pink')}
+          />
+          <CButton
+            label={text('label', 'Hello Button')}
+            onClick={action('clicked')}
+          />
+        </div>
+      )),
+    ),
+  );
+
+storiesOf('Section', module).add('Example', () => (
   <Section>
     <h1>Heading 1</h1>
     <p>Some paragraph text</p>
   </Section>
 ));
 
-storiesOf('Card', module).addWithInfo('Example', () => (
+storiesOf('Card', module).add('Example', () => (
   <div>
     <Columns size="medium" justify="between">
       <Card
@@ -150,7 +182,7 @@ storiesOf('Card', module).addWithInfo('Example', () => (
   </div>
 ));
 
-storiesOf('Columns', module).addWithInfo('with text', () => (
+storiesOf('Columns', module).add('with text', () => (
   <Columns size="small" masonry={false} maxCount={4}>
     <Box align="center" pad="medium" margin="small" colorIndex="light-2">
       Box 1
@@ -181,7 +213,7 @@ storiesOf('Columns', module).addWithInfo('with text', () => (
   </Columns>
 ));
 
-storiesOf('Hero', module).addWithInfo('with text', () => (
+storiesOf('Hero', module).add('with text', () => (
   <Hero
     background={
       <Image
@@ -200,11 +232,11 @@ storiesOf('Hero', module).addWithInfo('with text', () => (
   </Hero>
 ));
 
-storiesOf('Notification', module).addWithInfo('with text', () => (
+storiesOf('Notification', module).add('with text', () => (
   <Notification state="Sample state" message="Sample message" timestamp={{}} />
 ));
 
-storiesOf('Split', module).addWithInfo('Example', () => (
+storiesOf('Split', module).add('Example', () => (
   <Split showOnResponsive="both">
     <Box colorIndex="neutral-1" justify="center" align="center" pad="medium">
       Left Side
@@ -215,7 +247,7 @@ storiesOf('Split', module).addWithInfo('Example', () => (
   </Split>
 ));
 
-storiesOf('TableHeader', module).addWithInfo('Example', () => (
+storiesOf('TableHeader', module).add('Example', () => (
   <Table>
     <TableHeader
       labels={['Name', 'Account Number', 'Client ID', 'Account Type', 'Status']}
@@ -254,7 +286,7 @@ storiesOf('TableHeader', module).addWithInfo('Example', () => (
 ));
 
 storiesOf('Select', module)
-  .addWithInfo('Example', () => (
+  .add('Example', () => (
     <div style={{ width: '400px' }}>
       <Select
         placeHolder="None"
@@ -275,22 +307,27 @@ storiesOf('Select', module)
       />
     </div>
   ))
-  .addWithInfo('Example 2', () => (
+  .add('Example 2', () => (
     <CSelect
       placeHolder="None"
       options={['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']}
       value={undefined}
       onChange={({ target, option, value }) => {
+        action('clicked');
         alert(`your choice: ${value}`);
+        action('clicked');
       }}
     />
   ));
 
-storiesOf('Page', module).addWithInfo('Page', () => {
+storiesOf('Page', module).add('Page', () => {
+  
   const footer = (
     <div>
-      <CButton>Action 1.1</CButton>
-      <CButton danger>Action 2.2</CButton>
+      <CButton label={text('label', 'First ')}onClick={action('clicked')}></CButton>
+      <CButton label={text('sss', 'Second ')} onClick={action('clicked')} danger>
+        
+      </CButton>
 
       <style jsx>{`
         div {
@@ -329,5 +366,10 @@ storiesOf('Page', module).addWithInfo('Page', () => {
   );
 });
 
+storiesOf('Header', module).add('header', () => <CHeader />);
 
-
+storiesOf('Layer', module).add('layer', () => (
+  <Layer onClose={action('closed')} closer overlayClose>
+    <Article>content</Article>
+  </Layer>
+));

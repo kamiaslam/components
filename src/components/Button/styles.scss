@@ -5,17 +5,22 @@
     border-color: #929292;
     color: #333333;
 
-    padding: 6px 18px;
+    padding: 6px 38px;
 
     min-width: auto;
-
+    
     &:hover {
         box-shadow: none !important;
     }
-
-    &.hsbc--red {
+    
+    &.danger {
         border-color: #C82A24;
         background-color: #C82A24;
         color: #ffffff;
+        
     }
+
+    
 }
+
+

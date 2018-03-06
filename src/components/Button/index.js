@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { Button } from 'grommet';
 
 import styles from './styles.scss';
 
-export default class CButton extends Component {
+const propTypes = {
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+
+class CButton extends Component {
   render() {
-    const { children, onClick, color, danger, background, padding } = this.props;
+
+    const { children, onClick, color, danger, background, padding, label } = this.props;
 
     return (
       <div>
-        <Button label="Label" onClick={() => {}} className="button">
+        {/* <Button label={label + ' Gormmet'}  onClick={() => {}} className="button danger"> */}
           {/* <Spinning /> */}
-        </Button>
+        {/* </Button> */}
 
         <style jsx>{`
           div :global(.button) {
@@ -21,13 +28,18 @@ export default class CButton extends Component {
             padding: ${padding}
           }
         `}</style>
-      </div>
+      
 
-      // <Button
-      //   label="Label"
-      //   onClick={() => {}}
-      //   className={[styles.button, hsbc--red ? 'hsbc--red' : '']}
-      // />
+      <Button
+        label={label + 'Button'}
+        onClick={onClick}
+        className={[styles.button, danger ? 'danger' : '']}
+      />
+      </div>
     );
   }
 }
+
+CButton.propTypes = propTypes;
+
+export default CButton;

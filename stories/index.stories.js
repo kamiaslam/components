@@ -39,6 +39,7 @@ import {
   number,
   color,
 } from '@storybook/addon-knobs/react';
+import { checkA11y } from '@storybook/addon-a11y';
 
 import { CButton, CSelect, CPage, CCard, CParagraph, CHeader } from '../src';
 
@@ -106,6 +107,7 @@ storiesOf('Button', module)
 
 
   .addDecorator(withKnobs)
+  .addDecorator(checkA11y)
   .add(
     'with text',
     withNotes('A very simple component')(
@@ -365,8 +367,6 @@ storiesOf('Page', module).add('Page', () => {
     </CPage>
   );
 });
-
-storiesOf('Header', module).add('header', () => <CHeader />);
 
 storiesOf('Layer', module).add('layer', () => (
   <Layer onClose={action('closed')} closer overlayClose>

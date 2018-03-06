@@ -1,3 +1,7 @@
 :local(.header) {
     background-color: pink;
+
+    &__content {
+        background: blue;
+    }
 }

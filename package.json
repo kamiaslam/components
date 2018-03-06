@@ -26,6 +26,7 @@
     "styled-jsx": "^2.2.5"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^3.3.14",
     "@storybook/addon-actions": "^3.3.14",
     "@storybook/addon-knobs": "^3.3.14",
     "@storybook/addon-links": "^3.3.14",
@@ -51,6 +52,7 @@
   },
   "dependencies": {
     "@storybook/addon-info": "^3.3.14",
+    "classnames": "^2.2.5",
     "grommet": "^1.10.1",
     "prop-types": "^15.6.1"
   }

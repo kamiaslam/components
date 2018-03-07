@@ -11,7 +11,7 @@ export default class Header extends Component {
 
     return (
       <header className={classes}>
-        <div className={`${classes}__content`}>header</div>
+        <div className={`${styles.header}__content`}>header</div>
       </header>
     );
   }

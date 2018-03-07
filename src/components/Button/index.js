@@ -12,26 +12,30 @@ const propTypes = {
 
 class CButton extends Component {
   render() {
-    const { children, onClick, color, danger, label } = this.props;
+
+    const { children, onClick, color, danger, background, padding, label } = this.props;
 
     return (
-      // <div>
-      //   <Button label="Label" onClick={() => {}} className="button">
-      //     <Spinning />
-      //   </Button>
+      <div>
+        {/* <Button label={label + ' Gormmet'}  onClick={() => {}} className="button danger"> */}
+          {/* <Spinning /> */}
+        {/* </Button> */}
 
-      //   <style jsx>{`
-      //     div :global(.button) {
-      //       color: ${color};
-      //     }
-      //   `}</style>
-      // </div>
+        <style jsx>{`
+          div :global(.button) {
+            color: ${color};
+            background: ${background};
+            padding: ${padding}
+          }
+        `}</style>
+      
 
       <Button
-        label={label}
+        label={label + 'Button'}
         onClick={onClick}
         className={[styles.button, danger ? 'danger' : '']}
       />
+      </div>
     );
   }
 }

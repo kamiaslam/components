@@ -23,8 +23,12 @@ import {
   Card,
   Anchor,
   SVGIcon,
+  Map,
+  List,
+  ListItem,
   Layer,
 } from 'grommet';
+
 import 'grommet/grommet.min.css';
 import { withInfo } from '@storybook/addon-info';
 import { withNotes } from '@storybook/addon-notes';
@@ -68,7 +72,40 @@ storiesOf('Accordion', module).add('Example', () => (
   </Accordion>
 ));
 
+storiesOf('List', module).add('Example', () => (
+  <List>
+  <ListItem justify='between'
+    separator='horizontal'>
+    <span>
+      Alan
+    </span>
+    <span className='secondary'>
+      happy
+    </span>
+  </ListItem>
+  <ListItem justify='between'>
+    <span>
+      Chris
+    </span>
+    <span className='secondary'>
+      cool
+    </span>
+  </ListItem>
+  <ListItem justify='between'>
+    <span>
+      Adam
+    </span>
+    <span className='secondary'>
+      odd
+    </span>
+  </ListItem>
+</List>
+));
+
 storiesOf('Button', module)
+  
+
+
   .addDecorator(withKnobs)
   .addDecorator(checkA11y)
   .add(
@@ -94,7 +131,7 @@ storiesOf('Button', module)
         ~~~`)(() => (
         <div>
           <CButton
-            label={text('label', 'Hello Button')}
+            label={text('label', 'HSBC Button')}
             onClick={action('clicked')}
             color={color('color', 'pink')}
           />
@@ -286,11 +323,12 @@ storiesOf('Select', module)
   ));
 
 storiesOf('Page', module).add('Page', () => {
+  
   const footer = (
     <div>
-      <CButton onClick={action('clicked')}>Action 1</CButton>
-      <CButton onClick={action('clicked')} danger>
-        Action 2
+      <CButton label={text('label', 'First ')}onClick={action('clicked')}></CButton>
+      <CButton label={text('sss', 'Second ')} onClick={action('clicked')} danger>
+        
       </CButton>
 
       <style jsx>{`
@@ -306,17 +344,14 @@ storiesOf('Page', module).add('Page', () => {
   return (
     <CPage>
       <CCard title="Reset your password" footer={footer}>
-        <CParagraph>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-          <SVGIcon
+      <SVGIcon
             viewBox="0 0 130 108"
             version="1.1"
             type="logo"
             a11yTitle="Locations Finder"
           >
             <g
-              stroke="#865CD6"
+              stroke="#000000"
               strokeWidth="4"
               fill="none"
               strokeLinejoin="round"
@@ -324,6 +359,9 @@ storiesOf('Page', module).add('Page', () => {
               <path d="M40,65 L40,96 L16,107 L16,49 L16,49 L28.4679195,43.2855369 M75.6892892,43.6424091 L88,38 L88,96 L64,107 L64,64.5 L64,64.5 M64,64 L64,107 L40,96 L40,65 M89,38 L113,49 L113,107 L89,96 L89,38 Z M52,49 C56.971,49 61,44.971 61,40 C61,35.029 56.971,31 52,31 C47.029,31 43,35.029 43,40 C43,44.971 47.029,49 52,49 L52,49 Z M52,76 C52,76 28,58 28,40 C28,25 40,16 52,16 C64,16 76,25 76,40 C76,58 52,76 52,76 Z" />
             </g>
           </SVGIcon>
+        <CParagraph>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
         </CParagraph>
       </CCard>
     </CPage>

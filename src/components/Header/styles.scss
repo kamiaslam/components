@@ -1,7 +1,13 @@
 :local(.header) {
+
+    &.custom-header {
+        background-color: yellow; 
+
+        &__content {
+            background-color: green;
+        }
+    }
     background-color: pink;
 
-    &__content {
-        background: blue;
-    }
+    
 }
